@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Drone Flight Simulator</title>
+    <link rel="icon" href="drone.png" type="image/png">
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="canvas"></div>
+        <div id="controls">
+            <h3>Flight Controls:</h3>
+            <p><span class="key">W</span> Forward | <span class="key">S</span> Backward</p>
+            <p><span class="key">A</span> Left | <span class="key">D</span> Right</p>
+            <p><span class="key">↑</span> or <span class="key">Space</span> Ascend | <span class="key">↓</span> or <span class="key">Shift</span> Descend</p>
+            <p><span class="key">Q</span> Rotate Left | <span class="key">E</span> Rotate Right</p>
+            <p><span class="key">R</span> Reset Position</p>
+        </div>
+        <div id="dashboard">
+            <h3>Flight Data: <span id="droneName">Leader Drone</span></h3>
+            <p>Altitude: <span id="altitude">0.0</span> m</p>
+            <p>Speed: <span id="speed">0.0</span> m/s</p>
+            <p>Rotation: <span id="rotation">0.0</span>°</p>
+            <p>Tilt: <span id="tilt">0.0</span>°</p>
+            <div id="formation-status">
+                <p>Formation: <span id="formationMode">Off</span></p>
+                <p>Pattern: <span id="formationPattern">V</span></p>
+            </div>
+        </div>
+        <div id="message">
+            <h2>3D Drone Flight Simulator</h2>
+            <p>Fly a drone with realistic physics in a 3D environment.</p>
+            <p>Control multiple drones in formation or individually.</p>
+            <button id="startButton">Start Flying</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="src/js/environment.js"></script>
+    <script src="src/js/drone.js"></script>
+    <script src="src/js/controls.js"></script>
+    <script src="src/js/droneManager.js"></script>
+    <script src="src/js/NavigationGrid.js"></script>
+    <script src="src/js/Pathfinder.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html> 
