@@ -51,9 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const pathfinder = Pathfinder; // Assuming Pathfinder is accessible globally or as a module import
         const waypointNavigator = new WaypointNavigator(pathfinder, navigationGrid);
 
-        // Pass waypointNavigator to DroneManagerModule
-        // Note: The actual static create method for DroneManagerModule might be in a different file or an alias.
-        // Assuming DroneManagerModule.create is the correct entry point based on previous code.
         droneManager = DroneManagerModule.create(scene, camera, collidableObjects, navigationGrid, waypointNavigator);
         
         navigationGrid.visualize(scene); // Visualize the navigation grid (user placed it after droneManager creation)
